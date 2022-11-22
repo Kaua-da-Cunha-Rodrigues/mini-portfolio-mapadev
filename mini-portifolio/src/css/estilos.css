@@ -1,0 +1,126 @@
+body{
+    background-image: url(../imagens/fundo-site2.webp);
+    background-repeat: no-repeat; /*Não repetir a imagem na tela*/
+    background-size: cover; /*Cubrir todo o tamanho do body*/
+    background-position: center; /*A imagem alinha no centro do body*/
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*A junção das últimas 3 tags fazem o conteúdo centralizar*/
+    min-height: 100vh; /*100% da tela visível*/
+    padding: 30px;
+}
+.cartao{
+    background-color: #070d12;
+    width: 370px;
+    border: 2px solid #fea3fc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cartao .minhas-informacoes{
+    padding-top: 20px;
+    display: flex; /*Novamente centralizando*/
+    flex-direction: column; /*por padrão ele vem como rown (em linha). Agora ele está em coluna*/
+    align-items: center; /*Alinha horizontalmente por causa do flex direction*/
+    gap: 10px; /*Espaçamento entre os itens do display*/
+}
+.cartao .minhas-informacoes img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #3a4482 ;
+}
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+}
+.cartao .minhas-informacoes .cargo{
+    font-size: 20px;
+    color: #fef640;
+}
+.cartao .conteudo{
+    margin-top: 15px;
+}
+.cartao .abas{
+    display: flex; /*Faz os ícones ficarem um do lado do outro, pois o padrão do display é rown*/
+}
+.cartao .abas .aba{
+    width: 50%;  
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; 
+    cursor: pointer; /*Muda o cursor pra mãozinha ao chegar em cima do ícone*/
+    transition: background-color 0.2s ease-in-out; /*faz a cor do fundo ter uma transição suave quando ativa o hover*/
+}
+.cartao .abas .aba#aba1{
+    border-top-right-radius: 15px;
+}
+.cartao .abas .aba#aba2{
+    border-top-left-radius: 15px;
+}
+.cartao .abas img{
+    width: 30px;
+}
+.cartao .abas .aba.selecionado{
+    background-color: #202020;    
+}
+.cartao .informacoes-abas{
+    background-color: #262626;
+}
+.cartao .abas .aba:hover{
+    background-color: #414141;
+}
+.informacoes-abas .informacao{
+    min-height: 260px;
+    padding: 15px;
+    display: none; /**Esconde as informações*/
+}
+.informacoes-abas .informacao.selecionado{
+    display: block;
+}
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto; /*Cria um scroll caso a altura máxima ultrapasse o máximo*/
+    padding-right: 15px;
+}
+.informacoes-abas .descricao span{ 
+    color: #fef640;
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto; /*Caso seja adicionado mais links, gerar o scroll*/
+}
+.redes-sociais li a{
+    width: 250px;  
+    display: block;  /*O padrão de display é in-line, mudamos para conseguir alterar o width*/
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.redes-sociais .curriculo{
+    background-color: #06c165;
+}
+.redes-sociais .linkedin{
+    background-color: #1d87bd;
+}
+.redes-sociais .github{
+    background-color: #545454;
+}
+.redes-sociais li a:hover{
+    opacity: 0.8;    
+}
+
